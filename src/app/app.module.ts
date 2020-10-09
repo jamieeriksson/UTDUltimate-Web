@@ -18,11 +18,17 @@ import { MatExpansionModule } from "@angular/material/expansion";
 import { MatTabsModule } from "@angular/material/tabs";
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
+import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
+import { CarouselComponent } from "./carousel/carousel.component";
 import { SlideShowComponent } from "./roster-page/slide-show/slide-show.component";
 import { MatTooltipModule } from "@angular/material/tooltip";
-import { AmplifyAngularModule, AmplifyService } from "aws-amplify-angular";
 import { FormsModule } from "@angular/forms";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { GalleryPageComponent } from './gallery-page/gallery-page.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +42,9 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     BackgroundCometsComponent,
     TeamHeaderNavComponent,
     ContactUsComponent,
+    CarouselComponent,
     SlideShowComponent,
+    GalleryPageComponent
   ],
   imports: [
     BrowserModule,
@@ -47,11 +55,15 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     }),
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatTabsModule,
     AmplifyAngularModule,
+    MatTabsModule,
     MatTooltipModule,
     FormsModule,
     MatSnackBarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatTabsModule,
+    MatChipsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AmplifyService],
